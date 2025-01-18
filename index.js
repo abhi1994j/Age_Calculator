@@ -1,7 +1,7 @@
 function calculateAge() {
     const input = document.getElementById('calculator-input').value;
     const result = document.getElementById('calculator-result');
-    
+
     // Check if a date is entered
     if (!input) {
         result.textContent = "Please enter a valid date.";
@@ -9,14 +9,15 @@ function calculateAge() {
         result.style.color = "red";
         return;
     }
-    
+
     // Get the current date and birthdate
     const birthDate = new Date(input);
     const today = new Date();
 
     // Calculate age
     let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDifference = today.getMonth() - birthDate.getMonth();
+    console.log(age);
+    const monthDifference =today.getMonth() - birthDate.getMonth() ;
     const dayDifference = today.getDate() - birthDate.getDate();
 
     // Adjust age if the birthdate hasn't occurred yet this year
